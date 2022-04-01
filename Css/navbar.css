@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+/*Inicio de Navbar*/ 
+header {
+    width: 100%;
+    height: 15vh;
+    background-color:  rgba(12, 137, 122);
+    position: fixed;
+}
+
+.logo-navbar-galileo {
+    background-image: url("https://trello.com/1/cards/623a8f4b0a1c5b6910342b6d/attachments/623a8f5f6fb7e138b2e7cd4c/previews/623a8f606fb7e138b2e7cd54/download/03.png");
+    background-size: cover;
+    width: 270px;
+    height: 100px;
+    position: absolute;
+    left: 4%;
+    cursor: pointer;
+}
+
+#btn-menu-galileo {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 80px;
+    height: 50px;
+    padding: 34px 30px;
+}
+
+header label:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-navbar-galileo ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(-3%, 50%);
+    animation-name: desplazamiento;
+    animation-duration: 2s;
+}
+
+@keyframes desplazamiento {
+    0%{
+        transform: translate(90%, 50%);
+    }
+    100%{
+        transform: translate(-3%, 50%);
+    }
+}
+
+.menu-navbar-galileo ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.contacto-navbar-galileo {
+    background-image: url("https://trello.com/1/cards/623c8785d5dd2677f9503cf7/attachments/623d0222fe3bb7093ae868fa/previews/623d0222fe3bb7093ae86940/download/boton2.png");
+    background-size: cover;
+    width: 218px;
+    height: 57px;
+}
+.suscribirse-navbar-galileo {
+    background-image: url("https://trello.com/1/cards/623c8785d5dd2677f9503cf7/attachments/623d02233c5c588ee92355c1/previews/623d02233c5c588ee923564d/download/boton3.png");
+    background-size: cover;
+    width: 218px;
+    height: 57px;
+}
+.acerca-de-navbar-galileo {
+    background-image: url("https://trello.com/1/cards/623c8785d5dd2677f9503cf7/attachments/623d022104dc6e5d4298b826/previews/623d022104dc6e5d4298b82e/download/boton1.png");
+    background-size: cover;
+    width: 218px;
+    height: 57px;
+}
+
+.login-navbar-galileo {
+    background-image: url("https://trello.com/1/cards/623c8785d5dd2677f9503cf7/attachments/623d0224f076d64665d14bea/previews/623d0224f076d64665d14bfb/download/boton4.png");
+    background-size: cover;
+    width: 218px;
+    height: 57px;
+}
+
+@media screen and (max-width:970px){
+    header {
+        height: 9.2vh;
+        background-color:  rgba(15, 144, 230, 0.9);
+    }
+    header label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-navbar-galileo {
+        position: absolute;
+        background-color:  rgba(15, 144, 230, 0.9);
+        width: 40%;
+        margin-left: -100%;
+    }
+    .menu-navbar-galileo ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: translate(0, 0);
+    }
+    .menu-navbar-galileo ul li {
+        padding-top: 5px;
+    }
+    #btn-menu-galileo:checked ~ .menu-navbar-galileo {
+        margin: 0;
+    }
+    .logo-navbar-galileo {
+        width: 140px;
+        height: 50px;
+        left: 45%;
+    }
+}
+
+/*Fin de Navbar*/ 
+
+.img-article-galileo{
+    width: 310px;
+    height: 240px;
+    border-radius: 5px;
+}
+
+.galeria-galileo {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
+    row-gap: 55px;
+    column-gap: 15px;
+    padding-top: 10%;
+}
+
+@media screen and (min-width:660px) and (max-width:905px) {
+    .galeria-galileo {
+        grid-template-columns: auto auto;
+        grid-template-rows: 200px 200px 200px;
+        padding-top: 20%;
+    }
+    .menu-navbar-galileo {
+        width: 40%; 
+    }
+}
+
+@media screen and (max-width:659px){
+    .galeria-galileo {
+        grid-template-columns: auto;
+        grid-template-rows: 200px 200px 200px;
+        padding-top: 20%;
+    }
+    .menu-navbar-galileo {
+        width: 80%; 
+    }
+
+}
